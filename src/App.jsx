@@ -1,20 +1,21 @@
-import './App.css'
-import Home from './components/Home.jsx';
-import Login from './components/Login.jsx';
-import LoginIn from "./components/LoginIn.jsx";
-import Clone from './components/Clean.jsx';
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import "./App.css";
 
 function App() {
-
   return (
-    <div className='bg-gray-100'>
-      <Home/>
-      {/* <Login/> */}
-      {/* <LoginIn/> */}
-      {/* <Clone/> */}
- 
-    </div>
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
