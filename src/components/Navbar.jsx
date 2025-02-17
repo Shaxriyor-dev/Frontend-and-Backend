@@ -2,6 +2,7 @@ import * as React from "react";
 import checks from "../assets/logo/check.png";
 import searchs from "../assets/icon/searchs.png";
 import profile from "../assets/icon/profile.png";
+// import Profil from "./Profil.jsx";
 
 export default function Navbar() {
   return (
